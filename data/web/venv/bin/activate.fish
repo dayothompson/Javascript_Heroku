@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/dayothompson/Desktop/GitHub/javascript_project/data/web/venv"
+set -gx VIRTUAL_ENV "/Users/dayothompson/Desktop/GitHub/Javascript_Heroku/data/web/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
