@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <!-- D3 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+ <title>Remax Calgary Realestate</title>
+
+  <style>
+    img {
+        vertical-align: middle;
+        height: 500px;
+        width: 500px;
+    }
+    .border {
+      border-right: 1px solid black;
+    }
+
+.vl {
+  border-left: 2px solid gray;
+}
+#mapid {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+  </style>
+</head>
+
+<body>
+  <!-- The div that holds our map -->
+  <!-- <div id="mapid"></div> -->
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1><b>Remax Calgary Realestate</b></h1>
+    </div>
+
+      
+    <!--
+    <div><a class="btn btn-primary" href="viz" role="button">Heatmap</a></div>
+    <br>
+    <div><a class="btn btn-primary" href="scatter" role="button">Scatter Plot</a></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            -->
+            
+            <!-- New Table -->
+            
+            <table class="table table-bordered table-hover table-condensed table-striped">
+              <thead class="thead-dark"><tr>
+                <th title="Field #1">Price ($)</th>
+                <th title="Field #2">Address</th>
+                <th title="Field #3">Postal Code</th>
+                <th title="Field #4">Bed</th>
+                <th title="Field #5">Full Bath</th>
+                <th title="Field #6">Half Bath</th>
+                <th title="Field #7">Property Area</th>
+                <th title="Field #8">Property Type</th>
+                <th title="Field #9">Walk Score</th>
+                <th title="Field #10">Bike Score</th>
+                <th title="Field #11">Transit Score</th>
+                <th title="Field #10">Latitude</th>
+                <th title="Field #11">Longitude</th>
+              </tr></thead>
+              <tbody><tr>
+                {% for item in calgary %}
+                <td align="left">{{item.0|safe}}</td>
+                <td align="left">{{item.1|safe}}</td>
+                <td align="left">{{item.2|safe}}</td>
+                <td align="left">{{item.3|safe}}</td>
+                <td align="left">{{item.4|safe}}</td>
+                <td align="left">{{item.5|safe}}</td>
+                <td align="left">{{item.6|safe}}</td>
+                <td align="left">{{item.7|safe}}</td>
+                <td align="left">{{item.8|safe}}</td>
+                <td align="left">{{item.9|safe}}</td>
+                <td align="left">{{item.10|safe}}</td>
+                <td align="left">{{item.11|safe}}</td>
+                <td align="left">{{item.12|safe}}</td>
+              </tr>
+              {% endfor %}
+              </tbody>
+              </table> -->
+            <!-- End Table -->
+</div>
+ <!-- Leaflet JS -->
+ <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+ integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+ crossorigin=""></script>
+
+</body>
+
+</html>
