@@ -1,19 +1,23 @@
 from flask import Flask, render_template, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2
+import os
 
 app = Flask(__name__)
 
 db = SQLAlchemy()
 
 # connect to the db
-con = psycopg2.connect(
-            host="ec2-52-73-199-211.compute-1.amazonaws.com",
-            database="d1pkrk7oaeh4rp",
-            user="ehtmttkcjfldys",
-            password="a58fcaad2c9acb903fbf11d2031dd10e0f579453bf877d90736ef3b4e993e049"
-)
+# con = psycopg2.connect(
+#             host="ec2-52-73-199-211.compute-1.amazonaws.com",
+#             database="d1pkrk7oaeh4rp",
+#             user="ehtmttkcjfldys",
+#             password="a58fcaad2c9acb903fbf11d2031dd10e0f579453bf877d90736ef3b4e993e049"
+# )
 
+DATABASE_URL = 'postgres://ehtmttkcjfldys:a58fcaad2c9acb903fbf11d2031dd10e0f579453bf877d90736ef3b4e993e049@ec2-52-73-199-211.compute-1.amazonaws.com:5432/d1pkrk7oaeh4rp'
+
+con = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 def calgary_data_fun():
     cur = con.cursor()
