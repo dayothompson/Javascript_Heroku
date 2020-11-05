@@ -17,7 +17,7 @@ db = SQLAlchemy()
 
 DATABASE_URL = 'postgres://ehtmttkcjfldys:a58fcaad2c9acb903fbf11d2031dd10e0f579453bf877d90736ef3b4e993e049@ec2-52-73-199-211.compute-1.amazonaws.com:5432/d1pkrk7oaeh4rp'
 
-con = psycopg2.connect(DATABASE_URL, sslmode='require')
+con = psycopg2.connect(DATABASE_URL)
 
 def calgary_data_fun():
     cur = con.cursor()
