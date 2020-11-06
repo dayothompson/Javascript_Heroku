@@ -1,7 +1,7 @@
 // var url = "http://127.0.0.1:5000//jsonified";
 var url = "https://dayo-java.herokuapp.com/jsonified"
 // ######## 2 Variables ########
-console.log("calling app.js")
+console.log("calling APP.js")
 
 //Function for Area vs Price Graph
 function areaprice() {

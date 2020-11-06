@@ -1,5 +1,5 @@
 // set the dimensions and margins of the graph
-console.log("calling bar.js")
+console.log("calling BAR.js")
 var margin = {top: 30, right: 30, bottom: 30, left: 50},
     width = 900 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
