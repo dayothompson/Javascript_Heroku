@@ -16,8 +16,8 @@ var svg = d3.select("#bar")
 // get the data
 var url = "http://dayo-java.herokuapp.com/bardata";
 d3.json(url, function(response) {
-  console.log(data)
   data = response[0][0]
+  console.log(data)
 
   // List of groups
   var allGroup = d3.map(data, function(d){return(d.property_type)}).keys()
