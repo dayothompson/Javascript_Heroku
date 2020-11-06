@@ -1,4 +1,5 @@
 // set the dimensions and margins of the graph
+console.log("calling bar.js")
 var margin = {top: 30, right: 30, bottom: 30, left: 50},
     width = 900 - margin.left - margin.right,
     height = 600 - margin.top - margin.bottom;
@@ -13,7 +14,7 @@ var svg = d3.select("#bar")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-var url = "http://127.0.0.1:5000//bardata";
+var url = "http://dayo-java.herokuapp.com//bardata";
 d3.json(url, function(response) {
     data = response[0][0]
     console.log(data);
