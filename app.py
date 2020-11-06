@@ -87,6 +87,7 @@ def scatter():
     return render_template("scatter.html")
 
 
+
 @app.route("/bar")
 def bar():
     return render_template("bar.html")

@@ -25,6 +25,7 @@ function heatmap() {
   d3.json(url, function(data) {
     response = data[0][0]
     console.log(response);
+    console.log("calling data")
   
     var heatArray = [];
   

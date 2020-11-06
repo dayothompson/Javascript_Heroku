@@ -1,6 +1,7 @@
-var url = "http://127.0.0.1:5000//jsonified";
-
+// var url = "http://127.0.0.1:5000//jsonified";
+var url = "https://dayo-java.herokuapp.com/jsonified"
 // ######## 2 Variables ########
+console.log("calling app.js")
 
 //Function for Area vs Price Graph
 function areaprice() {
@@ -157,6 +158,7 @@ function areaprice() {
   d3.json(url, function(response) {
     csvData = response[0][0]
     // parse data
+    console.log(csvData);
     csvData.forEach(data => {
       data.walk_score = +data.walk_score;
       data.property_area = +data.property_area;
