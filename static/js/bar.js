@@ -14,7 +14,7 @@ var svg = d3.select("#bar")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // get the data
-var url = "http://dayo-java.herokuapp.com/bar";
+var url = "http://dayo-java.herokuapp.com/jsonified";
 d3.json(url, function(response) {
   console.log(response)
   data = response[0][0]

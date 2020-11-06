@@ -46,7 +46,7 @@ function heatmap() {
     }
   
     var heat = L.heatLayer(heatArray, {
-      radius: 50,
+      radius: 5000,
       blur: 35
     }).addTo(myMapHeat);
   
