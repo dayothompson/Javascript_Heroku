@@ -1,9 +1,11 @@
 from flask import Flask, render_template, jsonify
 from flask_sqlalchemy import SQLAlchemy
 import psycopg2
-import os
+# from flask_cors import CORS
+
 
 app = Flask(__name__)
+# cors = CORS(app)
 
 db = SQLAlchemy()
 
